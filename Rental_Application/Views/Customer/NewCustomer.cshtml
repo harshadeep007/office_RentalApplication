@@ -1,0 +1,44 @@
+﻿@model Rental_Application.ViewModels.NewCustomerViewModel
+<!-- jQuery UI CSS Reference -->
+<link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" />
+<!-- Required jQuery and jQuery UI Javascript references -->
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui-1.10.4.min.js")"></script>
+@{
+    ViewBag.Title = "NewCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Code to wire up your DatePicker -->
+<script type="text/javascript">
+    $(function () {
+        // This will make every element with the class "date-picker" into a DatePicker element
+        $('.date-picker').datepicker();
+    })
+</script>
+
+<h2>New Customer</h2>
+@using (Html.BeginForm("Create", "Customer"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.customer.CustomerName)
+        @Html.TextBoxFor(m => m.customer.CustomerName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <span>
+            @Html.LabelFor(m => m.customer.Birthdate)
+            @Html.TextBoxFor(m => m.customer.Birthdate, "{0:d/MM/yyyy }", new { @class = "form-control" })
+        </span>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.customer.MembershipTypeId, new SelectList(Model.MemberShipTypes, "Id", "MembershipName"), "Select MemberShipType", new { @class = "form-control" })
+    </div>
+
+    <div class="checkbox">
+        @Html.CheckBoxFor(m => m.customer.IsSubscribed)Subscribed to Newsletter?
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+

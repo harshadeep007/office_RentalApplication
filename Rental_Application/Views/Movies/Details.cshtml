@@ -1,0 +1,14 @@
+﻿@model Rental_Application.Models.Movie
+@{
+    ViewBag.Title = Model.MovieName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Model.MovieName</h2>
+
+<ul>
+    <li>Genre: @Model.Genre.GenreName</li>
+    <li>Release Date: @Model.ReleaseDate.ToLongDateString()</li>
+    <li>Date Added: @Model.DateAdded.ToLongDateString()</li>
+    <li>Number in Stock: @Model.NumberInStock</li>
+</ul>
