@@ -31,13 +31,33 @@ namespace Rental_Application.Controllers
             {
                 MemberShipTypes = MemberShipTypes
             };
-            return View("NewCustomer",viewmodel);
+            return View("NewCustomer", viewmodel);
         }
 
         [HttpPost]
-        public ActionResult Create(Customer Customer)
+        public ActionResult Save(Customer Customer)
         {
-            _context.Customers.Add(Customer);
+            if (!ModelState.IsValid)
+            {
+                var viewmodel = new NewCustomerViewModel
+                {
+                    customer = Customer,
+                    MemberShipTypes = _context.MemberShipTypes.ToList()
+                };
+                return View("NewCustomer", viewmodel);
+            }
+            if (Customer.id == 0)
+            {
+                _context.Customers.Add(Customer);
+            }
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.id == Customer.id);
+                customerInDb.CustomerName = Customer.CustomerName;
+                customerInDb.Birthdate = Customer.Birthdate;
+                customerInDb.MembershipTypeId = Customer.MembershipTypeId;
+                customerInDb.IsSubscribed = Customer.IsSubscribed;
+            }
             _context.SaveChanges();
             return RedirectToAction("Index", "Customer");
         }
@@ -67,7 +87,7 @@ namespace Rental_Application.Controllers
                 MemberShipTypes = _context.MemberShipTypes.ToList()
             };
 
-            return View("NewCustomer",viewmodel );
+            return View("NewCustomer", viewmodel);
         }
 
         //private IEnumerable<Customer> GetCustomers()

@@ -281,6 +281,10 @@
     <Compile Include="Migrations\201705180703555_SeedingDataforGenreTable.Designer.cs">
       <DependentUpon>201705180703555_SeedingDataforGenreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705190939292_AddedDbSetForGenres.cs" />
+    <Compile Include="Migrations\201705190939292_AddedDbSetForGenres.Designer.cs">
+      <DependentUpon>201705190939292_AddedDbSetForGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -292,6 +296,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\NewCustomerViewModel.cs" />
+    <Compile Include="ViewModels\NewMovieViewModel.cs" />
     <Compile Include="ViewModels\RandomViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -419,6 +424,7 @@
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customer\NewCustomer.cshtml" />
+    <Content Include="Views\Movies\NewMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -480,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705180703555_SeedingDataforGenreTable.resx">
       <DependentUpon>201705180703555_SeedingDataforGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705190939292_AddedDbSetForGenres.resx">
+      <DependentUpon>201705190939292_AddedDbSetForGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -10,8 +10,9 @@ namespace Rental_Application.Models
     public class Customer
     {
         public int id { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Please Enter Customer Name")]
         [StringLength(255)]
+        [Display(Name ="Customer Name")]
         public string CustomerName { get; set; }
         public bool IsSubscribed { get; set; }
         public MemberShipType MemberShipType { get; set; }

@@ -10,5 +10,6 @@ namespace Rental_Application.ViewModels
     {
         public IEnumerable<MemberShipType> MemberShipTypes { get; set; }
         public Customer customer { get; set; }
+
     }
 }

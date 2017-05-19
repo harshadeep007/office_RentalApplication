@@ -331,7 +331,6 @@ D:\Harsha\Office_Poc\Rental_Application\bin\EntityFramework.SqlServer.xml
 D:\Harsha\Office_Poc\Rental_Application\bin\Microsoft.AspNet.Identity.Core.xml
 D:\Harsha\Office_Poc\Rental_Application\bin\Microsoft.AspNet.Identity.Owin.xml
 D:\Harsha\Office_Poc\Rental_Application\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.csprojResolveAssemblyReference.cache
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.intialmodelforce.resources
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.intialmodel1.resources
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.AddIsSubscribedToCustomer.resources
@@ -349,6 +348,8 @@ D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.AddedGenreClassandnewcolumnstoMovieClass.resources
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.deletedacolumn.resources
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.SeedingDataforGenreTable.resources
+D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.Migrations.AddedDbSetForGenres.resources
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.csproj.GenerateResource.Cache
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.dll
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.pdb
+D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.csprojResolveAssemblyReference.cache

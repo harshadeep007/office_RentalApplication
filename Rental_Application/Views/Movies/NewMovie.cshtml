@@ -1,0 +1,38 @@
+﻿@model Rental_Application.ViewModels.NewMovieViewModel
+@{
+    ViewBag.Title = "NewMovie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var title = (Model.Movies == null) ? "New Movie" : "Edit Movie";
+    ViewBag.Title = @title;
+}
+<h2>@title</h2>
+
+@using (Html.BeginForm("Save", "Movies"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movies.MovieName)
+        @Html.TextBoxFor(m => m.Movies.MovieName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movies.ReleaseDate)
+        @Html.TextBoxFor(m => m.Movies.ReleaseDate, "{0:d/MM/yyyy }", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movies.GenreId)
+        @Html.DropDownListFor(m => m.Movies.GenreId, new SelectList(Model.Genres, "Id", "GenreName"),"Select Genre Type", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movies.NumberInStock)
+        @Html.TextBoxFor(m => m.Movies.NumberInStock, new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(m => m.Movies.id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
