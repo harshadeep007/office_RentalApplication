@@ -29,12 +29,14 @@ namespace Rental_Application.Controllers
             var MemberShipTypes = _context.MemberShipTypes.ToList();
             var viewmodel = new NewCustomerViewModel()
             {
+                customer=new Customer(),
                 MemberShipTypes = MemberShipTypes
             };
             return View("NewCustomer", viewmodel);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer Customer)
         {
             if (!ModelState.IsValid)

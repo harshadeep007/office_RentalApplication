@@ -44,8 +44,18 @@ namespace Rental_Application.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie Movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewmodel = new NewMovieViewModel
+                {
+                    Movie = Movie,
+                    Genres = _Context.Genres.ToList()
+                };
+                return View("NewMovie", viewmodel);
+            }
             if (Movie.id == 0)
             {
                 Movie.DateAdded = DateTime.Now;
@@ -59,26 +69,20 @@ namespace Rental_Application.Controllers
                 MovieInDb.NumberInStock = Movie.NumberInStock;
                 MovieInDb.ReleaseDate = Movie.ReleaseDate; ;
             }
-            try
-            {
-                _Context.SaveChanges();
-            }
-            catch (DbEntityValidationException e)
-            {
-                Console.WriteLine(e);
-            }
+
+            _Context.SaveChanges();
 
             return RedirectToAction("Index", "Movies");
         }
 
         public ActionResult Edit(int id)
         {
-            var Movies = _Context.Movies.SingleOrDefault(m => m.id == id);
-            if (Movies == null)
+            var Movie = _Context.Movies.SingleOrDefault(m => m.id == id);
+            if (Movie == null)
                 return HttpNotFound();
             var viewmodel = new NewMovieViewModel()
             {
-                Movies = Movies,
+                Movie = Movie,
                 Genres = _Context.Genres.ToList()
             };
 

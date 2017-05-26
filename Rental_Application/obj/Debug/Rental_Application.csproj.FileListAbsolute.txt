@@ -353,3 +353,11 @@ D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.csproj.Gene
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.dll
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.pdb
 D:\Harsha\Office_Poc\Rental_Application\obj\Debug\Rental_Application.csprojResolveAssemblyReference.cache
+D:\Harsha\Office_Poc\Rental_Application\bin\System.Net.Http.Formatting.dll
+D:\Harsha\Office_Poc\Rental_Application\bin\System.Web.Http.dll
+D:\Harsha\Office_Poc\Rental_Application\bin\System.Web.Http.WebHost.dll
+D:\Harsha\Office_Poc\Rental_Application\bin\System.Net.Http.Formatting.xml
+D:\Harsha\Office_Poc\Rental_Application\bin\System.Web.Http.xml
+D:\Harsha\Office_Poc\Rental_Application\bin\System.Web.Http.WebHost.xml
+D:\Harsha\Office_Poc\Rental_Application\bin\AutoMapper.dll
+D:\Harsha\Office_Poc\Rental_Application\bin\AutoMapper.xml
