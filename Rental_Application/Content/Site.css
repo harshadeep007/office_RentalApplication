@@ -32,3 +32,9 @@ textarea {
 .validation-summary-errors{
     color:red;
 }
+
+.ActionLinkMouseHover:hover {
+    color: #ffffff;
+    background-color: #c40001;
+ 
+}

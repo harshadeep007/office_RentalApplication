@@ -9,8 +9,17 @@ namespace Rental_Application.App_Start
     {
         public MappingProfile()
         {
+            // Domain to Dto
             CreateMap<Customer, CustomerDto>();
-            CreateMap<CustomerDto, Customer>();
+            CreateMap<Movie, MovieDto>();
+
+
+            // Dto to Domain
+           CreateMap<CustomerDto, Customer>()
+                .ForMember(c => c.id, opt => opt.Ignore());
+
+            CreateMap<MovieDto, Movie>()
+                .ForMember(c => c.id, opt => opt.Ignore());
 
         }
 

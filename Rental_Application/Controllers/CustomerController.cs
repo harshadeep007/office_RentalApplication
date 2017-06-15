@@ -29,7 +29,7 @@ namespace Rental_Application.Controllers
             var MemberShipTypes = _context.MemberShipTypes.ToList();
             var viewmodel = new NewCustomerViewModel()
             {
-                customer=new Customer(),
+                customer = new Customer(),
                 MemberShipTypes = MemberShipTypes
             };
             return View("NewCustomer", viewmodel);
@@ -90,7 +90,8 @@ namespace Rental_Application.Controllers
             };
 
             return View("NewCustomer", viewmodel);
-        }
+
+    }
 
         //private IEnumerable<Customer> GetCustomers()
         //{
